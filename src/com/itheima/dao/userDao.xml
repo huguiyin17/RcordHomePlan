@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace表示命名空間  -->
+<mapper namespace="com.itheima.dao.userDao">
+	<select id="loginByUsername" parameterType="String" resultType="user">
+		select * from user where user_name = #{user_name} and user_pwd=#{user_pwd} and validation='1'
+	</select>
+	
+</mapper>
